@@ -9,6 +9,10 @@ describe('Sapper template app', () => {
 		cy.contains('h1', 'Great success!')
 	});
 
+	it('has the correct heading', () => {
+		cy.findByRole("heading").should("contain", "Great success!");
+	});
+
 	it('navigates to /about', () => {
 		cy.get('nav a').contains('about').click();
 		cy.url().should('include', '/about');
