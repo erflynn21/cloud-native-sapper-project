@@ -23,7 +23,7 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_ENV: test
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
