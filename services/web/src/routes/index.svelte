@@ -38,7 +38,7 @@
 <h1>Great success!</h1>
 
 <figure>
-	<figcaption>Have fun with Sapper!</figcaption>
+	<figcaption>Have fun with Sapper! Woohoo!</figcaption>
 </figure>
 
 <p>
