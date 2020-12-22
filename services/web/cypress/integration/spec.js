@@ -1,5 +1,3 @@
-import posts from '../../src/routes/blog/_posts';
-
 describe('Sapper template app', () => {
 	beforeEach(() => {
 		cy.visit('/')
@@ -18,9 +16,10 @@ describe('Sapper template app', () => {
 		cy.url().should('include', '/about');
 	});
 
-	it('navigates to /blog', () => {
-		cy.get('nav a').contains('blog').click();
-		cy.url().should('include', '/blog');
+	it("displays blog posts", () => {
+		cy.get("[data-cy=blog-posts-list] li").should(
+			"not.have.length", 0
+		);
 	});
 });
 
