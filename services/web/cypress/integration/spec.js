@@ -16,11 +16,11 @@ describe('Sapper template app', () => {
 		cy.url().should('include', '/about');
 	});
 
-	it("displays blog posts", () => {
-		cy.get("[data-cy=blog-posts-list] li").should(
-			"not.have.length", 0
-		);
-	});
+	// it("displays blog posts", () => {
+	// 	cy.get("[data-cy=blog-posts-list] li").should(
+	// 		"not.have.length", 0
+	// 	);
+	// });
 });
 
 describe('Blog posts', () => {
