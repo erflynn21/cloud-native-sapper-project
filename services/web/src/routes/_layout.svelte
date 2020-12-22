@@ -1,5 +1,6 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+	import Nav from "../components/Nav.svelte";
+	import TailwindCSS from "../components/tailwindcss.svelte";
 
 	export let segment;
 </script>
@@ -15,8 +16,9 @@
 	}
 </style>
 
-<Nav {segment}/>
+<TailwindCSS />
+<Nav {segment} />
 
 <main>
-	<slot></slot>
+	<slot />
 </main>
