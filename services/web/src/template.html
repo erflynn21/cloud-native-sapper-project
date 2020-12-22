@@ -11,9 +11,8 @@
 	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 	<link rel="icon" type="image/png" href="favicon.png">
 
-	<!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.
+	css" />
 	%sapper.styles%
 
 	<!-- This contains the contents of the <svelte:head> component, if
@@ -32,9 +31,18 @@
 				     https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
 	<script src="/__/firebase/8.2.1/firebase-remote-config.js"></script>
+	<script src="/__/firebase/8.2.1/firebase-auth.js"></script>
 	
 	<!-- Initialize Firebase -->
 	<script src="/__/firebase/init.js"></script>
+
+	<!-- FirebaseUI -->
+	<script src=" https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.j
+	s "></script>
+	<script>
+		var firebaseAuthUi = new
+			firebaseui.auth.AuthUI(firebase.auth());
+	</script>
 	
 	<!-- Sapper creates a <script> tag containing `src/client.js`
 		     and anything else it needs to hydrate the app and
